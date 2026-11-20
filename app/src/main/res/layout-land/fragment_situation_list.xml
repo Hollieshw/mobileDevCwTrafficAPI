@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Left-hand information panel -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Traffic Scotland"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#202020"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current road incidents and roadworks"
+            android:textSize="15sp"
+            android:textColor="#666666" />
+        <TextView
+            android:id="@+id/tvLastUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last updated: Waiting for data..."
+            android:textSize="12sp"
+            android:textColor="#777777"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search by road name..."
+            android:iconifiedByDefault="false" />
+
+
+        <Button
+            android:id="@+id/btnFindNearby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Nearby"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp" />
+
+
+        <Button
+            android:id="@+id/btnViewMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Map"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp" />
+        <LinearLayout
+            android:id="@+id/loadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading traffic data..."
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginStart="12dp" />
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#DDDDDD"
+                android:dividerHeight="1dp" />
+
+            <TextView
+                android:id="@+id/tvNoResults"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="No matching situations found"
+                android:textSize="16sp"
+                android:textColor="#777777"
+                android:gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

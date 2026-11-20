@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to situations"
+            android:layout_gravity="top|start"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Situation details"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#202020"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Situation type"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#202020" />
+
+        <TextView
+            android:id="@+id/tvSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Situation type"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:id="@+id/tvRoadName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Road name unavailable"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#2369A5"
+            android:paddingBottom="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Public comment"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#202020" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Situation comment"
+            android:textSize="16sp"
+            android:textColor="#555555"
+            android:paddingBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location coordinates"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#202020" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location details"
+            android:textSize="16sp"
+            android:textColor="#555555" />
+
+    </LinearLayout>
+
+</ScrollView>
